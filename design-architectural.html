@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isaac FOFANA — Architecture QHSE & Maîtrise des Risques</title>
+  <meta name="description" content="Portfolio architectural d'Isaac FOFANA. Alternant Qualité, Hygiène, Sécurité et Environnement. Spécialité gestion des risques, normes ISO et démarche RSE.">
+  
+  <!-- Polices Architecturales & Éditoriales Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+          },
+          colors: {
+            stoneBg: '#F7F5F0',
+            paper: '#FFFFFF',
+            architectDark: '#171816',
+            hairline: '#E3DFD7',
+            forestNoble: '#17392B',
+            moss: '#2D5B45',
+            bronze: '#96784A',
+            bronzeLight: '#F3EFE6',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Esthétique architecturale : trame de fond subtile et hairlines */
+    body {
+      background-color: #F7F5F0;
+      color: #171816;
+      background-image: 
+        radial-gradient(#D8D2C4 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
+    }
+    
+    .hairline-b {
+      border-bottom: 1px solid #E3DFD7;
+    }
+    .hairline-r {
+      border-right: 1px solid #E3DFD7;
+    }
+    .hairline-l {
+      border-left: 1px solid #E3DFD7;
+    }
+    .hairline-t {
+      border-top: 1px solid #E3DFD7;
+    }
+    .hairline-all {
+      border: 1px solid #E3DFD7;
+    }
+
+    ::selection {
+      background: #17392B;
+      color: #F7F5F0;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-forestNoble selection:text-stoneBg">
+
+  <!-- ================= SWITCHER DE VUE / NAVIGATION ENTRE LES VERSIONS ================= -->
+  <div class="bg-architectDark text-stone-300 text-xs py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 font-mono text-[11px]">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>PROJET : PORTFOLIO QHSE // VARIANTE ARCHITECTURE ÉLÉGANTE</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-stone-500 hidden sm:inline">Comparer les versions :</span>
+        <a href="index.html" class="px-2.5 py-0.5 rounded bg-stone-800 hover:bg-stone-700 text-stone-200 transition-colors">
+          ← Vue Standard (Corporate)
+        </a>
+        <span class="px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-700/50">
+          Vue Architecturale (Actuelle)
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CARTOUCHE TECHNIQUE D'ARCHITECTE (HEADER) ================= -->
+  <header class="bg-paper/95 backdrop-blur hairline-b sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Ligne 1 : Données cartouche de plan -->
+      <div class="grid grid-cols-2 md:grid-cols-4 font-mono text-[10px] uppercase text-stone-500 hairline-b divide-x divide-hairline">
+        <div class="px-4 py-2">
+          <span class="text-stone-400 block">PLAN N°</span>
+          <span class="font-bold text-architectDark">QHSE-2026-IF</span>
+        </div>
+        <div class="px-4 py-2">
+          <span class="text-stone-400 block">MISSION VISÉE</span>
+          <span class="font-bold text-forestNoble">ALTERNANCE QHSE</span>
+        </div>
+        <div class="px-4 py-2 hidden md:block">
+          <span class="text-stone-400 block">RYTHME D'INTERVENTION</span>
+          <span class="font-bold text-architectDark">1 SEM. ÉCOLE / 2-3 SEM. ENTREPRISE</span>
+        </div>
+        <div class="px-4 py-2 hidden md:block">
+          <span class="text-stone-400 block">LOCALISATION</span>
+          <span class="font-bold text-architectDark">LYON / MOBILITÉ PARIS (PERMIS B)</span>
+        </div>
+      </div>
+
+      <!-- Ligne 2 : Navigation et identité -->
+      <div class="px-4 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-4">
+        
+        <div>
+          <a href="#" class="group">
+            <span class="font-mono text-[11px] text-bronze uppercase tracking-widest block font-bold">Cabinet de Compétences</span>
+            <span class="font-serif text-2xl sm:text-3xl text-architectDark tracking-tight font-medium group-hover:text-forestNoble transition-colors">
+              Isaac Fofana
+            </span>
+            <span class="text-xs text-stone-500 block font-sans tracking-wide mt-0.5">
+              Chargé de QHSE • Spécialité Gestion des Risques & RSE
+            </span>
+          </a>
+        </div>
+
+        <!-- Navigation épurée avec numéros de plan -->
+        <nav class="hidden lg:flex items-center gap-7 font-mono text-xs uppercase tracking-wider text-stone-600">
+          <a href="#profil" class="hover:text-forestNoble transition-colors">
+            <span class="text-stone-400">01.</span> Profil
+          </a>
+          <a href="#normes" class="hover:text-forestNoble transition-colors">
+            <span class="text-stone-400">02.</span> Normes & DUERP
+          </a>
+          <a href="#parcours" class="hover:text-forestNoble transition-colors">
+            <span class="text-stone-400">03.</span> 4 Secteurs
+          </a>
+          <a href="#rse" class="hover:text-forestNoble transition-colors">
+            <span class="text-stone-400">04.</span> RSE Planète
+          </a>
+          <a href="#contact" class="hover:text-forestNoble transition-colors">
+            <span class="text-stone-400">05.</span> Contact
+          </a>
+        </nav>
+
+        <!-- CTA Directs -->
+        <div class="flex items-center gap-3">
+          <a href="CV_Isaac_FOFANA.pdf" download="CV_Isaac_FOFANA.pdf" class="px-4 py-2 border border-stone-800 text-architectDark hover:bg-stone-800 hover:text-white font-mono text-xs uppercase tracking-wider transition-all">
+            Télécharger CV
+          </a>
+          <a href="#contact" class="px-4 py-2 bg-forestNoble hover:bg-moss text-white font-mono text-xs uppercase tracking-wider transition-all shadow-sm">
+            Engager
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= SECTION HERO : ÉTUDE VOLUMÉTRIQUE ================= -->
+  <section id="profil" class="max-w-7xl mx-auto px-4 sm:px-8 py-16 sm:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Colonne Manifeste (7 colonnes) -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <div class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-forestNoble border-b border-forestNoble pb-1">
+          <span>// CADRE D'ÉLÉVATION PROFESSIONNELLE</span>
+        </div>
+
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-architectDark font-normal leading-[1.12]">
+          L'architecture de la sécurité, la rigueur de la mesure, <span class="italic font-normal text-forestNoble">la responsabilité durable.</span>
+        </h1>
+
+        <p class="font-sans text-base sm:text-lg text-stone-700 leading-relaxed max-w-2xl font-light">
+          En reconversion ciblée vers le <strong>Management QHSE</strong> avec une spécialité en <strong>gestion des risques</strong>. Issu d’un cursus scientifique international (<strong>Bachelor of Science Chimie</strong> en Inde, bilingue anglais B2) et fort de missions analytiques dans <strong>4 secteurs industriels</strong>, je conçois des systèmes de prévention pérennes et conformes aux exigences normatives les plus strictes.
+        </p>
+
+        <!-- Grille de spécifications clés façon devis descriptif -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-px bg-hairline hairline-all mt-8">
+          
+          <div class="bg-paper p-4">
+            <span class="font-mono text-[10px] uppercase text-stone-400 block">DISPONIBILITÉ</span>
+            <span class="font-serif text-xl text-architectDark font-bold block mt-1">Immédiate</span>
+            <span class="text-[11px] text-stone-500 font-mono">Alternance</span>
+          </div>
+
+          <div class="bg-paper p-4">
+            <span class="font-mono text-[10px] uppercase text-stone-400 block">RYTHME</span>
+            <span class="font-serif text-xl text-forestNoble font-bold block mt-1">1 sem / 2-3</span>
+            <span class="text-[11px] text-stone-500 font-mono">École / Entreprise</span>
+          </div>
+
+          <div class="bg-paper p-4">
+            <span class="font-mono text-[10px] uppercase text-stone-400 block">HABILITATION</span>
+            <span class="font-serif text-xl text-rose-800 font-bold block mt-1">Certifié SST</span>
+            <span class="text-[11px] text-stone-500 font-mono">Secouriste travail</span>
+          </div>
+
+          <div class="bg-paper p-4">
+            <span class="font-mono text-[10px] uppercase text-stone-400 block">LANGUE INTERNATIONALE</span>
+            <span class="font-serif text-xl text-architectDark font-bold block mt-1">Anglais B2</span>
+            <span class="text-[11px] text-stone-500 font-mono">SRM IST (Inde)</span>
+          </div>
+
+          <div class="bg-paper p-4">
+            <span class="font-mono text-[10px] uppercase text-stone-400 block">TERRAIN INDUSTRIEL</span>
+            <span class="font-serif text-xl text-forestNoble font-bold block mt-1">4 Secteurs</span>
+            <span class="text-[11px] text-stone-500 font-mono">Agro, Peinture, Cacao</span>
+          </div>
+
+          <div class="bg-paper p-4">
+            <span class="font-mono text-[10px] uppercase text-stone-400 block">ENGAGEMENT ÉCOLOGIQUE</span>
+            <span class="font-serif text-xl text-forestNoble font-bold block mt-1">Bénévole</span>
+            <span class="text-[11px] text-stone-500 font-mono">Ma Petite Planète</span>
+          </div>
+
+        </div>
+
+        <!-- Coordonnées rapides d'architecte -->
+        <div class="pt-4 flex flex-wrap items-center gap-6 font-mono text-xs text-stone-600">
+          <button onclick="copyToClipboard('0665568849', 'Téléphone')" class="flex items-center gap-1.5 hover:text-forestNoble transition-colors">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-bronze"></i>
+            <span>06 65 56 88 49</span>
+            <span class="text-[10px] bg-stone-200 px-1 py-0.5 text-stone-600">COPIER</span>
+          </button>
+          <button onclick="copyToClipboard('isaacfofana50@gmail.com', 'Email')" class="flex items-center gap-1.5 hover:text-forestNoble transition-colors">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-bronze"></i>
+            <span>isaacfofana50@gmail.com</span>
+            <span class="text-[10px] bg-stone-200 px-1 py-0.5 text-stone-600">COPIER</span>
+          </button>
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-bronze"></i>
+            <span>Dardilly / Lyon (Permis B)</span>
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Colonne Portrait & Passe-Partout Architectural (5 colonnes) -->
+      <div class="lg:col-span-5">
+        <div class="relative max-w-sm mx-auto">
+          
+          <!-- Passe-partout blanc avec cadre et ombre fine -->
+          <div class="bg-paper p-5 hairline-all shadow-xl shadow-stone-300/40 space-y-4">
+            
+            <!-- Photo dans son encadrement -->
+            <div class="relative aspect-[4/5] bg-stone-100 overflow-hidden hairline-all">
+              <img src="photo.jpg" alt="Isaac Fofana - Chargé QHSE" class="w-full h-full object-cover grayscale contrast-105 hover:grayscale-0 transition-all duration-700">
+              <div class="absolute bottom-2 right-2 bg-architectDark/90 text-stone-200 font-mono text-[9px] uppercase px-2 py-0.5 tracking-widest backdrop-blur-sm">
+                FIG. 01 — IDENTITÉ
+              </div>
+            </div>
+
+            <!-- Légende de l'œuvre / Cartouche individuel -->
+            <div class="pt-2 border-t border-hairline font-mono text-[11px] space-y-1">
+              <div class="flex justify-between text-stone-500">
+                <span>CANDIDAT :</span>
+                <span class="font-bold text-architectDark">ISAAC FOFANA</span>
+              </div>
+              <div class="flex justify-between text-stone-500">
+                <span>CYCLE :</span>
+                <span class="text-forestNoble font-semibold">MASTÈRE MANAGEMENT QHSE</span>
+              </div>
+              <div class="flex justify-between text-stone-500">
+                <span>ÉCOLE :</span>
+                <span>ISE LYON / IET LYON</span>
+              </div>
+              <div class="flex justify-between text-stone-500 pt-1">
+                <span>STATUT FINANCEMENT :</span>
+                <span class="text-stone-800">100% OPCO (COÛT ÉCOLE 0€)</span>
+              </div>
+            </div>
+
+            <a href="#contact" class="w-full block py-2.5 text-center bg-architectDark hover:bg-forestNoble text-white font-mono text-xs uppercase tracking-wider transition-colors">
+              Initier une prise de contact
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION 02 : MATRICE NORMATIVE & GESTION DU RISQUE ================= -->
+  <section id="normes" class="hairline-t hairline-b bg-paper py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16 pb-6 hairline-b">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-bronze block font-bold">
+            02 // SYSTÈME DE MANAGEMENT INTÉGRÉ
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-architectDark mt-1">
+            Les Fondations Normatives & Techniques
+          </h2>
+        </div>
+        <p class="font-mono text-xs text-stone-500 max-w-md">
+          Alignement rigoureux sur les référentiels internationaux pour garantir la conformité juridique, la santé des équipes et l'empreinte environnementale.
+        </p>
+      </div>
+
+      <!-- Grille architecturale des 4 piliers ISO -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-px bg-hairline hairline-all">
+        
+        <div class="bg-paper p-6 space-y-3">
+          <span class="font-mono text-xs text-stone-400 block">PILIER 01</span>
+          <h3 class="font-serif text-2xl text-architectDark font-medium">ISO 9001</h3>
+          <p class="font-mono text-[11px] text-bronze uppercase">Qualité & Processus</p>
+          <p class="font-sans text-xs text-stone-600 leading-relaxed font-light">
+            Orientation client, approche processus, amélioration continue (PDCA), maîtrise des non-conformités et audits internes.
+          </p>
+        </div>
+
+        <div class="bg-paper p-6 space-y-3">
+          <span class="font-mono text-xs text-stone-400 block">PILIER 02</span>
+          <h3 class="font-serif text-2xl text-architectDark font-medium">ISO 14001</h3>
+          <p class="font-mono text-[11px] text-emerald-700 uppercase">Environnement & RSE</p>
+          <p class="font-sans text-xs text-stone-600 leading-relaxed font-light">
+            Analyse environnementale, aspects environnementaux significatifs (AES), gestion raisonnée des déchets et prévention des pollutions.
+          </p>
+        </div>
+
+        <div class="bg-paper p-6 space-y-3">
+          <span class="font-mono text-xs text-stone-400 block">PILIER 03</span>
+          <h3 class="font-serif text-2xl text-architectDark font-medium">ISO 45001</h3>
+          <p class="font-mono text-[11px] text-rose-700 uppercase">Santé & Sécurité au Travail</p>
+          <p class="font-sans text-xs text-stone-600 leading-relaxed font-light">
+            Évaluation des risques professionnels (DUERP), réduction des accidents, arbre des causes, enquêtes d'incidents et suivi TF/TG.
+          </p>
+        </div>
+
+        <div class="bg-paper p-6 space-y-3">
+          <span class="font-mono text-xs text-stone-400 block">PILIER 04</span>
+          <h3 class="font-serif text-2xl text-architectDark font-medium">ISO 22000</h3>
+          <p class="font-mono text-[11px] text-amber-700 uppercase">Sécurité des Denrées</p>
+          <p class="font-sans text-xs text-stone-600 leading-relaxed font-light">
+            Système HACCP, Bonnes Pratiques d'Hygiène (BPH), maîtrise des points critiques (CCP) et traçabilité agroalimentaire complète.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ÉTUDE TECHNIQUE : LE DUERP MODÉLISÉ -->
+      <div class="mt-12 bg-stoneBg p-8 hairline-all">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-8 space-y-3">
+            <span class="font-mono text-xs uppercase tracking-widest text-forestNoble font-bold">
+              [ ÉTUDE DE CAS & SPÉCIALISATION RISQUES ]
+            </span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-architectDark">
+              Modélisation Matricielle d'un DUERP sous Excel Avancé
+            </h3>
+            <p class="font-sans text-sm text-stone-700 leading-relaxed font-light">
+              Développement d'un modèle d'évaluation exhaustive des risques professionnels : découpage rigoureux par <strong>Unités de Travail (UT)</strong>, cotation mathématique de la criticité ($C = P \times G \times F$), hiérarchisation automatique des risques intolérables et élaboration d'un plan d'actions de prévention chiffré et priorisé selon les 9 principes généraux de prévention.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 font-mono text-[11px] text-stone-600">
+              <span class="px-2.5 py-1 bg-paper hairline-all">AMDEC Mécanique/Process</span>
+              <span class="px-2.5 py-1 bg-paper hairline-all">Méthode 5P (Arbre des Causes)</span>
+              <span class="px-2.5 py-1 bg-paper hairline-all">Indicateurs TF & TG</span>
+              <span class="px-2.5 py-1 bg-paper hairline-all">Certifié Secouriste SST</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 bg-paper p-5 hairline-all text-center space-y-2">
+            <span class="font-mono text-[10px] uppercase text-stone-400 block">LIVRABLE DOCUMENT UNIQUE</span>
+            <span class="font-serif text-3xl font-bold text-forestNoble block">100%</span>
+            <p class="font-sans text-xs text-stone-600">
+              Prêt à être transposé et adapté aux spécificités de vos ateliers ou sites tertiaires.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION 03 : CHRONIQUE DES 4 SECTEURS INDUSTRIELS ================= -->
+  <section id="parcours" class="max-w-7xl mx-auto px-4 sm:px-8 py-20">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16 pb-6 hairline-b">
+      <div>
+        <span class="font-mono text-xs uppercase tracking-widest text-bronze block font-bold">
+          03 // ANCRAGE INDUSTRIEL
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-architectDark mt-1">
+          Quatre Secteurs d'Expérimentation Terrain
+        </h2>
+      </div>
+      <p class="font-mono text-xs text-stone-500 max-w-md">
+        De la chimie des polymères à l'agroalimentaire de pointe : une expérience concrète des impératifs de conformité et des analyses de laboratoire.
+      </p>
+    </div>
+
+    <!-- Disposition éditoriale en 4 planches architecturales -->
+    <div class="space-y-6">
+      
+      <!-- Planche 01 : G.I.D Le Blason -->
+      <div class="bg-paper p-6 sm:p-8 hairline-all hover:border-forestNoble transition-colors">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
+          
+          <div class="lg:col-span-3 font-mono text-xs space-y-1">
+            <span class="text-stone-400 block font-normal">01/2024 — 09/2024</span>
+            <span class="font-bold text-forestNoble block">G.I.D LE BLASON</span>
+            <span class="text-stone-500 text-[11px] block">Abidjan • Capital 403 000€</span>
+            <span class="inline-block mt-2 px-2 py-0.5 bg-stone-100 text-[10px] uppercase text-stone-600 hairline-all">
+              Secteur Agroalimentaire
+            </span>
+          </div>
+
+          <div class="lg:col-span-9 space-y-3">
+            <h3 class="font-serif text-2xl text-architectDark font-medium">
+              Assistant Qualité — Surveillance ISO 22000 & BPH
+            </h3>
+            <p class="font-sans text-sm text-stone-700 leading-relaxed font-light">
+              Mise en œuvre du protocole de suivi de la perte en poids après cuisson (échantillonnage de 10 spécimens sur 3 à 4 familles de produits par lot). Contrôle des conditions thermiques et hygiéniques de stockage. Vérification quotidienne du respect des bonnes pratiques d'hygiène et contribution directe aux plans d'actions d'amélioration continue.
+            </p>
+            <div class="flex items-center gap-3 font-mono text-xs text-stone-500 pt-1">
+              <span class="text-emerald-800 font-semibold">• Maintien conformité ISO 22000</span>
+              <span>• Gestion des non-conformités</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Planche 02 : Drocolor -->
+      <div class="bg-paper p-6 sm:p-8 hairline-all hover:border-forestNoble transition-colors">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
+          
+          <div class="lg:col-span-3 font-mono text-xs space-y-1">
+            <span class="text-stone-400 block font-normal">02/2023 — 07/2023</span>
+            <span class="font-bold text-architectDark block">DROCOLOR</span>
+            <span class="text-stone-500 text-[11px] block">Abidjan</span>
+            <span class="inline-block mt-2 px-2 py-0.5 bg-stone-100 text-[10px] uppercase text-stone-600 hairline-all">
+              Secteur Peintures & Chimie
+            </span>
+          </div>
+
+          <div class="lg:col-span-9 space-y-3">
+            <h3 class="font-serif text-2xl text-architectDark font-medium">
+              Technicien de Laboratoire — Analyses Physico-chimiques
+            </h3>
+            <p class="font-sans text-sm text-stone-700 leading-relaxed font-light">
+              Audit et validation de la conformité des matières premières chimiques avant libération pour formulation industrielle. Réalisation de <strong>10 à 15 analyses physico-chimiques quotidiennes</strong> selon des protocoles normés (viscosité, densité, pouvoir couvrant, pH).
+            </p>
+            <div class="flex items-center gap-3 font-mono text-xs text-stone-500 pt-1">
+              <span class="text-forestNoble font-semibold">• 10 à 15 tests / jour</span>
+              <span>• Traçabilité des matières premières</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Planche 03 : Cémoi -->
+      <div class="bg-paper p-6 sm:p-8 hairline-all hover:border-forestNoble transition-colors">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
+          
+          <div class="lg:col-span-3 font-mono text-xs space-y-1">
+            <span class="text-stone-400 block font-normal">05/2022 — 10/2022</span>
+            <span class="font-bold text-architectDark block">CÉMOI</span>
+            <span class="text-stone-500 text-[11px] block">Abidjan</span>
+            <span class="inline-block mt-2 px-2 py-0.5 bg-stone-100 text-[10px] uppercase text-stone-600 hairline-all">
+              Industrie Cacao & Chocolat
+            </span>
+          </div>
+
+          <div class="lg:col-span-9 space-y-3">
+            <h3 class="font-serif text-2xl text-architectDark font-medium">
+              Assistant Laboratoire — Métrologie & Taux de Conformité 90%
+            </h3>
+            <p class="font-sans text-sm text-stone-700 leading-relaxed font-light">
+              Exécution de 5 à 8 séries analytiques complexes garantissant un <strong>taux d'acceptation produit de 90%</strong>. Calibration métrologique méthodique des instruments de mesure afin de garantir la répétabilité et la fiabilité des relevés. Rédaction des bulletins de contrôle.
+            </p>
+            <div class="flex items-center gap-3 font-mono text-xs text-stone-500 pt-1">
+              <span class="text-forestNoble font-semibold">• Taux de conformité 90%</span>
+              <span>• Étalonnage & Métrologie</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Planche 04 : Nescafé -->
+      <div class="bg-paper p-6 sm:p-8 hairline-all hover:border-forestNoble transition-colors">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline">
+          
+          <div class="lg:col-span-3 font-mono text-xs space-y-1">
+            <span class="text-stone-400 block font-normal">09/2021 — 10/2021</span>
+            <span class="font-bold text-architectDark block">NESCAFÉ</span>
+            <span class="text-stone-500 text-[11px] block">Abidjan</span>
+            <span class="inline-block mt-2 px-2 py-0.5 bg-stone-100 text-[10px] uppercase text-stone-600 hairline-all">
+              Industrie Café & Boissons
+            </span>
+          </div>
+
+          <div class="lg:col-span-9 space-y-3">
+            <h3 class="font-serif text-2xl text-architectDark font-medium">
+              Stage Assistant Laboratoire — Contrôle pH & Humidité
+            </h3>
+            <p class="font-sans text-sm text-stone-700 leading-relaxed font-light">
+              Surveillance continue de la qualité physico-chimique de l'eau industrielle (3 contrôles journaliers du potentiel hydrogène) et mesure systématique du taux d'humidité des grains de café avant transfert en torréfaction.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= SECTION 04 : RSE & ÉCOLOGIE VÉCUE ================= -->
+  <section id="rse" class="hairline-t hairline-b bg-forestNoble text-stoneBg py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="max-w-3xl space-y-4 mb-12">
+        <span class="font-mono text-xs uppercase tracking-widest text-emerald-300 font-bold block">
+          04 // TRANSITION ÉCOLOGIQUE & RSE
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-white">
+          L'Environnement n'est pas une contrainte, c'est un projet d'adhésion.
+        </h2>
+        <p class="font-sans text-stone-300 text-base font-light leading-relaxed">
+          En tant que bénévole actif chez <strong>Ma Petite Planète (Lyon)</strong>, j'anime et motive des collectifs autour de défis écologiques mesurables. Cette expérience nourrit directement ma vision de l'ISO 14001 : faire de la démarche environnementale un vecteur de fierté et de cohésion d'équipe plutôt qu'une simple obligation légale.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-emerald-900/60 border border-emerald-800">
+        <div class="p-6 bg-forestNoble space-y-2">
+          <span class="font-mono text-xs text-emerald-400 block">DÉMARCHE 01</span>
+          <h4 class="font-serif text-xl text-white">Mobilisation des Équipes</h4>
+          <p class="font-sans text-xs text-stone-300 font-light leading-relaxed">
+            Pédagogie active et animation d'ateliers participatifs pour ancrer les écogestes au quotidien.
+          </p>
+        </div>
+        <div class="p-6 bg-forestNoble space-y-2">
+          <span class="font-mono text-xs text-emerald-400 block">DÉMARCHE 02</span>
+          <h4 class="font-serif text-xl text-white">Mesure de l'Empreinte</h4>
+          <p class="font-sans text-xs text-stone-300 font-light leading-relaxed">
+            Quantification des impacts carbone et valorisation des filières de réduction des déchets industriels.
+          </p>
+        </div>
+        <div class="p-6 bg-forestNoble space-y-2">
+          <span class="font-mono text-xs text-emerald-400 block">DÉMARCHE 03</span>
+          <h4 class="font-serif text-xl text-white">Culture RSE & ISO 14001</h4>
+          <p class="font-sans text-xs text-stone-300 font-light leading-relaxed">
+            Mise en cohérence entre la stratégie d'entreprise et les actions tangibles sur le terrain.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION 05 : SPÉCIFICATIONS CONTRACTUELLES & CONTACT ================= -->
+  <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-8 py-20">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Bordereau Récapitulatif RH (5 colonnes) -->
+      <div class="lg:col-span-5 space-y-6">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-bronze block font-bold">
+            05 // SPÉCIFICATIONS DE RECRUTEMENT
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-architectDark mt-1">
+            Modalités d'Intégration
+          </h2>
+        </div>
+
+        <div class="bg-paper p-6 hairline-all space-y-4 font-mono text-xs">
+          <div class="pb-3 hairline-b">
+            <span class="text-stone-400 block text-[10px]">INTITULÉ DE POSTE</span>
+            <span class="font-bold text-architectDark text-sm">Alternant Chargé de QHSE</span>
+          </div>
+          <div class="pb-3 hairline-b">
+            <span class="text-stone-400 block text-[10px]">RYTHME DE PRÉSENCE</span>
+            <span class="font-bold text-forestNoble text-sm">1 semaine école / 2 à 3 semaines entreprise</span>
+          </div>
+          <div class="pb-3 hairline-b">
+            <span class="text-stone-400 block text-[10px]">LOCALISATION PRINCIPALE</span>
+            <span class="text-stone-800">Dardilly / Lyon et Métropole • Mobilité Paris</span>
+          </div>
+          <div class="pb-3 hairline-b">
+            <span class="text-stone-400 block text-[10px]">PERMIS</span>
+            <span class="text-stone-800">Permis B (Véhiculé)</span>
+          </div>
+          <div>
+            <span class="text-stone-400 block text-[10px]">FINANCEMENT FORMATION</span>
+            <span class="text-stone-800">Pris en charge intégrale par l'OPCO</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <a href="CV_Isaac_FOFANA.pdf" download="CV_Isaac_FOFANA.pdf" class="flex-1 py-3 text-center bg-stone-800 hover:bg-black text-white font-mono text-xs uppercase tracking-wider transition-colors">
+            Télécharger CV (PDF)
+          </a>
+          <button onclick="window.print()" class="px-4 py-3 bg-paper hairline-all hover:bg-stone-100 text-stone-700 font-mono text-xs uppercase transition-colors">
+            Imprimer
+          </button>
+        </div>
+      </div>
+
+      <!-- Module de Transmission directe (7 colonnes) -->
+      <div class="lg:col-span-7">
+        <div class="bg-paper p-8 hairline-all space-y-6">
+          
+          <div class="border-b border-hairline pb-4">
+            <h3 class="font-serif text-2xl text-architectDark font-medium">Établir la Liaison</h3>
+            <p class="font-sans text-xs text-stone-500 font-light mt-1">
+              Pour convenir d'un premier entretien ou demander des précisions sur le calendrier d'alternance.
+            </p>
+          </div>
+
+          <!-- Canaux directs en 2 clics -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="p-4 bg-stoneBg hairline-all flex items-center justify-between">
+              <div>
+                <span class="font-mono text-[10px] uppercase text-stone-400 block">LIGNE DIRECTE</span>
+                <a href="tel:0665568849" class="font-mono text-xs font-bold text-architectDark hover:text-forestNoble">
+                  06 65 56 88 49
+                </a>
+              </div>
+              <button onclick="copyToClipboard('0665568849', 'Téléphone')" class="p-1.5 bg-paper hairline-all text-stone-500 hover:text-stone-800 text-[10px] font-mono">
+                COPIER
+              </button>
+            </div>
+
+            <div class="p-4 bg-stoneBg hairline-all flex items-center justify-between">
+              <div>
+                <span class="font-mono text-[10px] uppercase text-stone-400 block">COURRIEL</span>
+                <a href="mailto:isaacfofana50@gmail.com" class="font-mono text-xs font-bold text-architectDark hover:text-forestNoble break-all">
+                  isaacfofana50@gmail.com
+                </a>
+              </div>
+              <button onclick="copyToClipboard('isaacfofana50@gmail.com', 'Email')" class="p-1.5 bg-paper hairline-all text-stone-500 hover:text-stone-800 text-[10px] font-mono">
+                COPIER
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Formulaire de contact architectural -->
+          <form onsubmit="handleArchForm(event)" class="space-y-4 pt-2">
+            <div>
+              <label class="block font-mono text-[10px] uppercase text-stone-600 mb-1">Émetteur / Entreprise *</label>
+              <input type="text" id="arch-name" required placeholder="ex. Valérie Dupont — Direction des Ressources Humaines" class="w-full p-3 bg-stoneBg hairline-all font-sans text-xs focus:outline-none focus:border-forestNoble">
+            </div>
+
+            <div>
+              <label class="block font-mono text-[10px] uppercase text-stone-600 mb-1">Courriel de réponse *</label>
+              <input type="email" id="arch-email" required placeholder="valerie.dupont@groupe.fr" class="w-full p-3 bg-stoneBg hairline-all font-sans text-xs focus:outline-none focus:border-forestNoble">
+            </div>
+
+            <div>
+              <label class="block font-mono text-[10px] uppercase text-stone-600 mb-1">Contenu de la correspondance *</label>
+              <textarea id="arch-msg" rows="3" required placeholder="Bonjour Isaac, nous souhaitons échanger avec vous concernant un poste d'alternant QHSE au sein de notre unité..." class="w-full p-3 bg-stoneBg hairline-all font-sans text-xs focus:outline-none focus:border-forestNoble"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-forestNoble hover:bg-moss text-white font-mono text-xs uppercase tracking-widest transition-colors shadow">
+              Transmettre la correspondance
+            </button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= PIED DE PLAN (FOOTER) ================= -->
+  <footer class="hairline-t bg-paper py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-stone-500">
+      <div>
+        <span>ISAAC FOFANA // CANDIDATURE ALTERNANCE QHSE 2026</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-forestNoble underline">Basculer sur la version standard</a>
+        <span>•</span>
+        <a href="#profil" class="hover:text-forestNoble">Haut de page ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-architectDark text-stoneBg font-mono text-xs px-4 py-3 hairline-all shadow-2xl transition-all duration-300 translate-y-20 opacity-0 pointer-events-none">
+    <span id="toast-text">Donnée copiée avec succès.</span>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function copyToClipboard(text, label) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`${label} copié dans le presse-papier.`);
+      }).catch(() => {
+        const t = document.createElement('textarea');
+        t.value = text;
+        document.body.appendChild(t);
+        t.select();
+        document.execCommand('copy');
+        document.body.removeChild(t);
+        showToast(`${label} copié dans le presse-papier.`);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-text').textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 2800);
+    }
+
+    function handleArchForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('arch-name').value;
+      const email = document.getElementById('arch-email').value;
+      const msg = document.getElementById('arch-msg').value;
+      const body = `Bonjour Isaac,\n\n${msg}\n\nCordialement,\n${name}\nContact : ${email}`;
+      window.location.href = `mailto:isaacfofana50@gmail.com?subject=Contact Alternance QHSE - ${encodeURIComponent(name)}&body=${encodeURIComponent(body)}`;
+    }
+  </script>
+</body>
+</html>

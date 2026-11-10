@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isaac FOFANA | Chargé QHSE - Alternance & Gestion des Risques</title>
+  <meta name="description" content="Portfolio de Isaac FOFANA - Alternant Qualité, Hygiène, Sécurité et Environnement (QHSE). Spécialisé en gestion des risques et management intégré. Recherche d'alternance (1 sem école / 2-3 sem entreprise).">
+  
+  <!-- Polices Google : Inter & Plus Jakarta Sans pour une typographie épurée et moderne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+            },
+            forest: {
+              DEFAULT: '#0F382C',
+              dark: '#08231B',
+              light: '#1B5E4B',
+            },
+            slateCustom: {
+              50: '#F8FAFC',
+              100: '#F1F5F9',
+              800: '#1E293B',
+              900: '#0F172A',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Effet de lissage et personnalisation */
+    ::selection {
+      background-color: #15803d;
+      color: #ffffff;
+    }
+    .badge-glow {
+      box-shadow: 0 0 15px rgba(22, 163, 74, 0.25);
+    }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; color: black !important; }
+    }
+  </style>
+</head>
+<body class="bg-[#FAFAFA] text-slate-800 antialiased selection:bg-brand-700 selection:text-white">
+
+  <!-- ================= SWITCHER DE VARIANTES ================= -->
+  <div class="bg-slate-900 text-slate-300 text-[11px] py-1.5 px-4 font-mono border-b border-slate-800">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <span>VARIATION DU SITE : <strong>Version Épurée & Corporate</strong></span>
+      <a href="design-architectural.html" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 hover:bg-emerald-900 border border-emerald-700/60 transition-colors font-medium">
+        <span>Voir la version inspirée de l'Architecture Élégante</span>
+        <i data-lucide="arrow-right" class="w-3 h-3"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- ================= TOP BANNER RECRUTEURS RH ================= -->
+  <div class="bg-forest text-emerald-100 text-xs sm:text-sm py-2.5 px-4 font-medium sticky top-0 z-50 shadow-sm border-b border-forest-light/40">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span><strong>RECHERCHE D'ALTERNANCE QHSE</strong> • Rythme : <strong>1 sem. école / 2 à 3 sem. entreprise</strong></span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="hidden md:inline-flex items-center gap-1.5 opacity-90">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-emerald-400"></i> Lyon & Région (Mobilité Paris / Permis B)
+        </span>
+        <a href="#contact" class="bg-emerald-600/90 hover:bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold transition-all flex items-center gap-1">
+          <span>Contacter</span>
+          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="bg-white/90 backdrop-blur-md sticky top-[37px] z-40 border-b border-slate-200/80 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Identité -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-forest text-white font-display font-bold text-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+          IF
+        </div>
+        <div>
+          <span class="font-display font-bold text-lg sm:text-xl text-slate-900 tracking-tight block">Isaac FOFANA</span>
+          <span class="text-xs text-slate-500 font-medium flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Chargé de QHSE | Spécialité Risques
+          </span>
+        </div>
+      </a>
+
+      <!-- Liens Desktop -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#valeur-ajoutee" class="hover:text-forest transition-colors">Atouts & Valeur</a>
+        <a href="#competences" class="hover:text-forest transition-colors">Compétences & Normes</a>
+        <a href="#experiences" class="hover:text-forest transition-colors">Parcours Industriel</a>
+        <a href="#formation" class="hover:text-forest transition-colors">Formation & SST</a>
+        <a href="#engagement" class="hover:text-forest transition-colors flex items-center gap-1.5 text-emerald-700">
+          <i data-lucide="leaf" class="w-4 h-4"></i> RSE / Écologie
+        </a>
+      </nav>
+
+      <!-- CTA Contact & CV -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="CV_Isaac_FOFANA.pdf" download="CV_Isaac_FOFANA.pdf" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 text-sm font-semibold transition-all">
+          <i data-lucide="download" class="w-4 h-4 text-slate-500"></i>
+          <span>CV (PDF)</span>
+        </a>
+        <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-forest hover:bg-forest-light text-white text-sm font-semibold shadow-sm hover:shadow transition-all">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>Me recruter</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100" aria-label="Menu principal">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3">
+      <a href="#valeur-ajoutee" class="block py-2 text-slate-700 font-medium mobile-link">Atouts & Valeur</a>
+      <a href="#competences" class="block py-2 text-slate-700 font-medium mobile-link">Compétences & Normes</a>
+      <a href="#experiences" class="block py-2 text-slate-700 font-medium mobile-link">Parcours Industriel</a>
+      <a href="#formation" class="block py-2 text-slate-700 font-medium mobile-link">Formation & SST</a>
+      <a href="#engagement" class="block py-2 text-emerald-800 font-semibold mobile-link flex items-center gap-2">
+        <i data-lucide="leaf" class="w-4 h-4 text-emerald-600"></i> RSE / Écologie (Ma Petite Planète)
+      </a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <a href="CV_Isaac_FOFANA.pdf" download="CV_Isaac_FOFANA.pdf" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg border border-slate-300 text-slate-700 text-sm font-semibold">
+          <i data-lucide="download" class="w-4 h-4"></i> Télécharger le CV
+        </a>
+        <a href="#contact" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg bg-forest text-white text-sm font-semibold">
+          <i data-lucide="send" class="w-4 h-4"></i> Contacter Isaac
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-white via-slate-50/50 to-[#FAFAFA]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Colonne Texte -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-semibold tracking-wide uppercase">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            Recherche d'alternance • Master / MSc QHSE
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-slate-900 leading-[1.15] tracking-tight">
+            Sécuriser vos équipes, fiabiliser vos processus, <span class="text-forest relative inline-block">
+              préserver l'environnement.
+              <svg class="absolute -bottom-1 left-0 w-full h-2 text-emerald-300/80 -z-10" viewBox="0 0 100 12" preserveAspectRatio="none">
+                <path d="M0,0 Q50,12 100,0" fill="currentColor" />
+              </svg>
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            En reconversion vers le <strong>Management QHSE</strong> avec une spécialisation en <strong>gestion des risques</strong>. Fort d’un <strong>Bachelor en Chimie</strong> et d'expériences concrètes dans <strong>4 secteurs industriels</strong>, j'apporte méthode scientifique, rigueur terrain et engagement RSE au service de votre conformité.
+          </p>
+
+          <!-- Badges Rapides Clés -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-2">
+            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700 shadow-sm flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-forest"></i> ISO 9001 / 14001 / 45001 / 22000
+            </span>
+            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700 shadow-sm flex items-center gap-1.5">
+              <i data-lucide="heart-pulse" class="w-3.5 h-3.5 text-rose-600"></i> Secouriste SST Certifié
+            </span>
+            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700 shadow-sm flex items-center gap-1.5">
+              <i data-lucide="languages" class="w-3.5 h-3.5 text-blue-600"></i> Anglais B2 (SRM IST, Inde)
+            </span>
+            <span class="px-3 py-1 bg-emerald-50 border border-emerald-200 rounded-md text-xs font-semibold text-emerald-800 shadow-sm flex items-center gap-1.5">
+              <i data-lucide="sprout" class="w-3.5 h-3.5 text-emerald-600"></i> Bénévole Ma Petite Planète
+            </span>
+          </div>
+
+          <!-- Boutons d'Action Principaux -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+            <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-forest hover:bg-forest-light text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-200">
+              <i data-lucide="calendar-check" class="w-4 h-4"></i>
+              <span>Échanger pour un contrat d'alternance</span>
+            </a>
+            <a href="CV_Isaac_FOFANA.pdf" download="CV_Isaac_FOFANA.pdf" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white border border-slate-300 hover:border-slate-400 text-slate-800 font-semibold text-sm shadow-sm hover:bg-slate-50 transition-all">
+              <i data-lucide="download" class="w-4 h-4 text-slate-600"></i>
+              <span>Télécharger mon CV</span>
+            </a>
+          </div>
+
+          <!-- Coordonnées rapides en un clic -->
+          <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-slate-500">
+            <button onclick="copyToClipboard('0665568849', 'Numéro de téléphone')" class="flex items-center gap-1.5 hover:text-forest transition-colors p-1" title="Cliquer pour copier">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-slate-400"></i>
+              <span>06 65 56 88 49</span>
+              <span class="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded text-slate-500">Copier</span>
+            </button>
+            <span class="text-slate-300">•</span>
+            <button onclick="copyToClipboard('isaacfofana50@gmail.com', 'Adresse e-mail')" class="flex items-center gap-1.5 hover:text-forest transition-colors p-1" title="Cliquer pour copier">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-slate-400"></i>
+              <span>isaacfofana50@gmail.com</span>
+              <span class="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded text-slate-500">Copier</span>
+            </button>
+            <span class="text-slate-300">•</span>
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400"></i>
+              Dardilly (69570) / Lyon
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Colonne Visuel / Carte de Synthèse Profil -->
+        <div class="lg:col-span-5">
+          <div class="relative max-w-md mx-auto">
+            
+            <!-- Décoration subtile en arrière-plan -->
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-emerald-500/20 to-teal-600/20 rounded-3xl blur-xl opacity-75"></div>
+
+            <!-- Carte principale -->
+            <div class="relative bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-7 shadow-xl shadow-slate-200/50 space-y-6">
+              
+              <!-- En-tête de carte avec Photo ou Avatar Professionnel -->
+              <div class="flex items-center gap-4 border-b border-slate-100 pb-5">
+                <div class="relative">
+                  <!-- Photo de profil : si présente photo.jpg, sinon avatar fallback élégant -->
+                  <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-forest to-emerald-800 text-white flex items-center justify-center font-display font-bold text-2xl shadow-inner overflow-hidden border-2 border-emerald-200">
+                    <img src="photo.jpg" alt="Isaac FOFANA" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <span style="display:none;" class="w-full h-full flex items-center justify-center">IF</span>
+                  </div>
+                  <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center" title="Actif et disponible">
+                    <i data-lucide="check" class="w-3 h-3 text-white"></i>
+                  </span>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-slate-900 text-lg">Isaac FOFANA</h3>
+                  <p class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded inline-block mt-0.5">
+                    Mastère Management QHSE
+                  </p>
+                  <p class="text-xs text-slate-500 mt-1">ISE Lyon / IET Lyon</p>
+                </div>
+              </div>
+
+              <!-- Fiche Express Recruteur -->
+              <div class="space-y-3.5 text-xs">
+                <div class="flex items-start justify-between py-1.5 border-b border-slate-100">
+                  <span class="text-slate-500 flex items-center gap-1.5">
+                    <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i> Rythme alternance
+                  </span>
+                  <span class="font-semibold text-slate-800 text-right">1 sem. école / 2-3 sem. entreprise</span>
+                </div>
+
+                <div class="flex items-start justify-between py-1.5 border-b border-slate-100">
+                  <span class="text-slate-500 flex items-center gap-1.5">
+                    <i data-lucide="target" class="w-3.5 h-3.5 text-slate-400"></i> Objectif
+                  </span>
+                  <span class="font-semibold text-slate-800 text-right">Gestion des Risques & RSE</span>
+                </div>
+
+                <div class="flex items-start justify-between py-1.5 border-b border-slate-100">
+                  <span class="text-slate-500 flex items-center gap-1.5">
+                    <i data-lucide="briefcase" class="w-3.5 h-3.5 text-slate-400"></i> Expérience labo & qualité
+                  </span>
+                  <span class="font-semibold text-slate-800 text-right">4 secteurs industriels</span>
+                </div>
+
+                <div class="flex items-start justify-between py-1.5 border-b border-slate-100">
+                  <span class="text-slate-500 flex items-center gap-1.5">
+                    <i data-lucide="award" class="w-3.5 h-3.5 text-slate-400"></i> Formation initiale
+                  </span>
+                  <span class="font-semibold text-slate-800 text-right">Bachelor of Science Chimie</span>
+                </div>
+
+                <div class="flex items-start justify-between py-1.5">
+                  <span class="text-slate-500 flex items-center gap-1.5">
+                    <i data-lucide="file-check" class="w-3.5 h-3.5 text-slate-400"></i> Habilitation
+                  </span>
+                  <span class="font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded text-[11px]">Certifié SST (2025-2027)</span>
+                </div>
+              </div>
+
+              <!-- Statut & Appel direct -->
+              <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200/60 flex items-center justify-between">
+                <div>
+                  <span class="text-[11px] uppercase tracking-wider text-slate-400 font-bold block">Prêt à intégrer</span>
+                  <span class="text-xs font-semibold text-slate-800">Votre direction QHSE</span>
+                </div>
+                <a href="tel:0665568849" class="px-3 py-1.5 bg-forest hover:bg-forest-light text-white text-xs font-semibold rounded-lg flex items-center gap-1 transition-all">
+                  <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> Appeler
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bandeau 4 Chiffres Clés -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+          <p class="text-3xl sm:text-4xl font-display font-extrabold text-forest">4</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-700 mt-1">Secteurs Industriels</p>
+          <p class="text-[11px] text-slate-500 mt-0.5">Agro, Peinture/Chimie, Cacao, Café</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+          <p class="text-3xl sm:text-4xl font-display font-extrabold text-forest">90%</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-700 mt-1">Taux de conformité</p>
+          <p class="text-[11px] text-slate-500 mt-0.5">Produit & respect ISO 22000</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+          <p class="text-3xl sm:text-4xl font-display font-extrabold text-forest">1 sem / 2-3</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-700 mt-1">Rythme d'alternance</p>
+          <p class="text-[11px] text-slate-500 mt-0.5">Présence forte en entreprise</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm text-center">
+          <p class="text-3xl sm:text-4xl font-display font-extrabold text-forest">B2</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-700 mt-1">Anglais Courant</p>
+          <p class="text-[11px] text-slate-500 mt-0.5">Bachelor réalisé en Inde (SRM IST)</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= VALEUR AJOUTÉE RECRUTEURS RH ================= -->
+  <section id="valeur-ajoutee" class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-forest uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+          Pourquoi ce profil ?
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 mt-3">
+          Une double compétence précieuse : Rigueur scientifique & Culture du risque terrain
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Ce qui fait la différence pour un responsable QHSE ou un recruteur RH cherchant un alternant autonome, investi et immédiatement opérationnel.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Carte 1 -->
+        <div class="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/90 hover:border-emerald-300 hover:shadow-md transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-forest/10 text-forest flex items-center justify-center mb-5 group-hover:bg-forest group-hover:text-white transition-colors">
+            <i data-lucide="microscope" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Méthode & Précision Scientifique</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Grâce à mon <strong>Bachelor en Chimie</strong> et mes missions de métrologie et d'analyses (10 à 15 tests quotidiens en labo), je maîtrise l'exploitation précise des données chiffrées, le calibrage métrologique et la traçabilité rigoureuse sans approximations.
+          </p>
+        </div>
+
+        <!-- Carte 2 -->
+        <div class="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/90 hover:border-emerald-300 hover:shadow-md transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-forest/10 text-forest flex items-center justify-center mb-5 group-hover:bg-forest group-hover:text-white transition-colors">
+            <i data-lucide="shield-alert" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Maîtrise de la Gestion des Risques</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Formé aux méthodologies éprouvées (<strong>AMDEC, méthode 5P / Arbre des causes, DUERP</strong>) et certifié <strong>SST</strong>, j'interviens sur la prévention des accidents de travail, le respect des consignes, l'enquête post-incident et la construction de plans d'action correctifs (CAPA).
+          </p>
+        </div>
+
+        <!-- Carte 3 -->
+        <div class="p-6 rounded-2xl bg-slate-50/70 border border-slate-200/90 hover:border-emerald-300 hover:shadow-md transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-forest/10 text-forest flex items-center justify-center mb-5 group-hover:bg-forest group-hover:text-white transition-colors">
+            <i data-lucide="globe-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-2">RSE Active & Ouverture Internationale</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Bénévole engagé auprès de <strong>Ma Petite Planète</strong> pour animer la transition écologique en entreprise. Ayant suivi mes études universitaires en <strong>Inde (anglais B2 professionnel)</strong>, je possède une grande capacité d'adaptation humaine et une aisance avec des équipes diversifiées.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= COMPÉTENCES & NORMES ================= -->
+  <section id="competences" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-forest uppercase tracking-widest bg-emerald-100/70 px-3 py-1 rounded-full border border-emerald-200">
+          Savoir-Faire & Boîte à Outils
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 mt-3">
+          Compétences Opérationnelles QHSE
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Un panel complet couvrant la réglementation, les audits, la sécurité des opérateurs et l'excellence opérationnelle.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Bloc 1 : Normes & Systèmes -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center">
+              <i data-lucide="check-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-slate-900">Normes & Référentiels</h3>
+          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span><strong>ISO 9001</strong> : Management de la Qualité</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span><strong>ISO 14001</strong> : Management Environnemental</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span><strong>ISO 45001</strong> : Santé et Sécurité au Travail</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span><strong>ISO 22000</strong> : Sécurité des denrées alimentaires</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Bonnes Pratiques d'Hygiène (BPH) & HACCP</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bloc 2 : Gestion des Risques & Sécurité -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center">
+              <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-slate-900">Gestion des Risques & Santé</h3>
+          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Analyse des risques : <strong>AMDEC, 5P</strong></span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Enquête & investigation d'incidents / accidents</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Mise en place de consignes & fiches sécurité</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Suivi des indicateurs : <strong>Taux de Fréquence (TF), Taux de Gravité (TG)</strong></span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Prévention des risques professionnels (RPS, TMS)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bloc 3 : Audits, Méthodes & Qualité -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center">
+              <i data-lucide="clipboard-list" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-slate-900">Audits & Amélioration Continue</h3>
+          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Participation aux <strong>audits internes & qualité</strong></span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Plans d'actions correctifs & préventifs (CAPA)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Rédaction de procédures, protocoles & modes opératoires</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Contrôle de conformité réglementaire</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Sensibilisation et animation d'ateliers QHSE</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bloc 4 : Environnement & RSE -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center">
+              <i data-lucide="recycle" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-slate-900">Environnement & RSE</h3>
+          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Gestion des déchets (tri, filières, valorisation)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Sensibilisation écologique terrain (Ma Petite Planète)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Prévention des pollutions industrielles</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Évaluation des aspects environnementaux significatifs (AES)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bloc 5 : Analyses Physico-chimiques & Métrologie -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center">
+              <i data-lucide="flask-conical" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-slate-900">Chimie, Mesures & Contrôle</h3>
+          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Calibration et métrologie des appareils d'analyse</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Contrôle qualité des matières premières et semi-finis</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Mesures physico-chimiques (pH, humidité, viscosité, perte en poids)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Rédaction de bulletins et rapports d'inspection</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bloc 6 : Outils Numériques & Soft Skills -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-bold text-base text-slate-900">Bureautique & Atouts Humains</h3>
+          </div>
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-600">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span><strong>Excel avancé</strong> (tableaux de bord, suivi des indicateurs, formules)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Pack Office 365 (Word, PowerPoint, Outlook)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Capacité d'adaptation & résolution méthodique de problèmes</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Esprit d'équipe, aisance relationnelle et communication pédagogique</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- FOCUS PROJET DUERP (GESTION DES RISQUES) -->
+      <div class="mt-10 bg-gradient-to-r from-emerald-900 via-forest to-emerald-950 rounded-2xl p-6 sm:p-8 text-white shadow-lg">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="space-y-2 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold uppercase tracking-wider">
+              <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i>
+              Projet Académique & Terrain • Spécialité Risques
+            </div>
+            <h3 class="text-xl sm:text-2xl font-display font-bold text-white">
+              Modélisation complète d'un DUERP (Document Unique)
+            </h3>
+            <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed">
+              Conception d'une matrice complète d'évaluation des risques professionnels sous Excel : identification des unités de travail (UT), cotation de criticité (Fréquence × Gravité), hiérarchisation des dangers et définition d'un plan d'actions de prévention priorisé (EPC, EPI, formation).
+            </p>
+          </div>
+          <div class="shrink-0 flex items-center gap-3">
+            <div class="px-4 py-2 rounded-xl bg-white/10 border border-white/20 text-center">
+              <span class="block text-xl font-bold font-display text-emerald-300">100%</span>
+              <span class="text-[11px] text-emerald-100">Méthodologique</span>
+            </div>
+            <div class="px-4 py-2 rounded-xl bg-white/10 border border-white/20 text-center">
+              <span class="block text-xl font-bold font-display text-emerald-300">ISO 45001</span>
+              <span class="text-[11px] text-emerald-100">Aligné Santé/Sécurité</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PARCOURS INDUSTRIEL & RÉALISATIONS ================= -->
+  <section id="experiences" class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-forest uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
+          Expérience de Terrain
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 mt-3">
+          Parcours Professionnel en Industrie
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Une immersion continue dans des environnements exigeants avec des responsabilités de contrôle, de conformité et de reporting.
+        </p>
+      </div>
+
+      <!-- Timeline des expériences -->
+      <div class="relative border-l-2 border-slate-200 ml-4 sm:ml-32 space-y-12">
+        
+        <!-- Expérience 1 : G.I.D Le Blason -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <!-- Point sur la timeline -->
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-forest border-4 border-white shadow-sm group-hover:scale-125 transition-transform"></div>
+          
+          <!-- Badge date sur desktop -->
+          <span class="hidden sm:block absolute -left-36 top-1 text-xs font-bold text-slate-500 text-right w-28">
+            01/2024 — 09/2024
+          </span>
+
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-slate-300 transition-all">
+            <span class="sm:hidden inline-block text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded mb-2">
+              Janv. 2024 — Sept. 2024
+            </span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="font-display font-bold text-lg text-slate-900">Stage Assistant en Qualité</h3>
+              <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-slate-200 rounded-md text-slate-700">
+                Agroalimentaire
+              </span>
+            </div>
+            <p class="text-xs font-semibold text-forest mt-0.5">G.I.D Le Blason • Abidjan</p>
+            
+            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+              Mission d'assurance qualité et d'accompagnement au maintien des normes d'hygiène et de sécurité alimentaire.
+            </p>
+
+            <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Suivi rigoureux de la perte en poids après cuisson : échantillonnage systématique de 10 échantillons sur 3 à 4 types de produits par session.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Contrôle de conformité des produits finis et supervision des conditions de stockage des denrées.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Vérification quotidienne du respect des bonnes pratiques d'hygiène (BPH) sur ligne.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Participation active au suivi des exigences de la norme <strong>ISO 22000</strong> et aux démarches d'amélioration continue.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Expérience 2 : Drocolor -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-sm group-hover:bg-forest group-hover:scale-125 transition-transform"></div>
+          
+          <span class="hidden sm:block absolute -left-36 top-1 text-xs font-bold text-slate-500 text-right w-28">
+            02/2023 — 07/2023
+          </span>
+
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-slate-300 transition-all">
+            <span class="sm:hidden inline-block text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded mb-2">
+              Fév. 2023 — Juil. 2023
+            </span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="font-display font-bold text-lg text-slate-900">Technicien de Laboratoire</h3>
+              <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-slate-200 rounded-md text-slate-700">
+                Industrie Chimique & Peintures
+              </span>
+            </div>
+            <p class="text-xs font-semibold text-forest mt-0.5">Drocolor • Abidjan</p>
+            
+            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+              Validation analytique et conformité des matières premières en amont de la production industrielle.
+            </p>
+
+            <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Vérification de la conformité des matières premières chimiques avant libération pour fabrication.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Réalisation de <strong>10 à 15 analyses physico-chimiques par jour</strong> garantissant les propriétés techniques des produits.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Contrôle qualité des peintures formulées et identification des écarts par rapport aux spécifications.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Expérience 3 : Cémoi -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-sm group-hover:bg-forest group-hover:scale-125 transition-transform"></div>
+          
+          <span class="hidden sm:block absolute -left-36 top-1 text-xs font-bold text-slate-500 text-right w-28">
+            05/2022 — 10/2022
+          </span>
+
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-slate-300 transition-all">
+            <span class="sm:hidden inline-block text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded mb-2">
+              Mai 2022 — Oct. 2022
+            </span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="font-display font-bold text-lg text-slate-900">Assistant de Laboratoire</h3>
+              <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-slate-200 rounded-md text-slate-700">
+                Industrie Agro / Chocolaterie
+              </span>
+            </div>
+            <p class="text-xs font-semibold text-forest mt-0.5">Cémoi • Abidjan</p>
+            
+            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+              Contrôle qualité exigeant pour garantir la conformité des produits semi-finis dans un groupe agroalimentaire international.
+            </p>
+
+            <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Exécution de 5 à 8 séries d'analyses physico-chimiques complexes permettant d'atteindre <strong>un taux de conformité de 90%</strong>.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Contrôle qualité strict des produits avant chaque étape clé de transformation.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>Calibration métrologique</strong> régulière des instruments de mesure pour assurer la précision des résultats.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Rédaction des synthèses et rapports d'analyses pour le comité de suivi qualité.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Expérience 4 : Nescafé -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white shadow-sm group-hover:bg-forest group-hover:scale-125 transition-transform"></div>
+          
+          <span class="hidden sm:block absolute -left-36 top-1 text-xs font-bold text-slate-500 text-right w-28">
+            09/2021 — 10/2021
+          </span>
+
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-slate-300 transition-all">
+            <span class="sm:hidden inline-block text-xs font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded mb-2">
+              Sept. 2021 — Oct. 2021
+            </span>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h3 class="font-display font-bold text-lg text-slate-900">Stage Assistant de Laboratoire</h3>
+              <span class="text-xs font-semibold px-2.5 py-1 bg-white border border-slate-200 rounded-md text-slate-700">
+                Industrie Agroalimentaire / Boissons
+              </span>
+            </div>
+            <p class="text-xs font-semibold text-forest mt-0.5">Nescafé • Abidjan</p>
+            
+            <ul class="mt-4 space-y-2 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Contrôles journaliers du pH de l'eau de process (3 contrôles/jour).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Mesure et suivi du taux d'humidité critique sur les grains de café avant torréfaction.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FORMATIONS & CERTIFICATIONS ================= -->
+  <section id="formation" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-forest uppercase tracking-widest bg-emerald-100/70 px-3 py-1 rounded-full border border-emerald-200">
+          Cursus Académique
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 mt-3">
+          Formations Supérieures & Habilitations
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Un cursus alliant compétences scientifiques pures et management des organisations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Diplôme 1 : Mastère QHSE -->
+        <div class="bg-white p-6 rounded-2xl border-2 border-forest/20 shadow-sm relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute top-0 right-0 bg-forest text-white text-[10px] uppercase font-bold tracking-wider px-3 py-1 rounded-bl-lg">
+            En cours
+          </div>
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-forest/10 text-forest flex items-center justify-center mb-4">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </div>
+            <p class="text-xs font-bold text-forest uppercase tracking-wider">Depuis 2024</p>
+            <h3 class="font-display font-bold text-lg text-slate-900 mt-1">MSc / Mastère QHSE</h3>
+            <p class="text-xs font-semibold text-slate-500 mt-0.5">ISE Lyon / IET Lyon</p>
+            <p class="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed">
+              Élaboration et déploiement de politiques QHSE, gestion des risques, audits internes, performance et conformité réglementaire.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-emerald-800 font-semibold flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> Spécialisation Gestion des Risques
+          </div>
+        </div>
+
+        <!-- Diplôme 2 : Bachelor Chimie Inde -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4">
+              <i data-lucide="flask-round" class="w-5 h-5"></i>
+            </div>
+            <p class="text-xs font-bold text-blue-700 uppercase tracking-wider">2018 — 2021</p>
+            <h3 class="font-display font-bold text-lg text-slate-900 mt-1">Bachelor of Science Chimie</h3>
+            <p class="text-xs font-semibold text-slate-500 mt-0.5">SRM IST • Tattakulathur (Inde)</p>
+            <p class="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed">
+              Chimie appliquée, techniques analytiques instrumentales et applications industrielles. Réalisé intégralement en langue anglaise.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-blue-700 font-semibold flex items-center gap-1.5">
+            <i data-lucide="globe" class="w-4 h-4"></i> Cursus International bilingue
+          </div>
+        </div>
+
+        <!-- Diplôme 3 : Secouriste SST -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center mb-4">
+              <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+            </div>
+            <p class="text-xs font-bold text-rose-600 uppercase tracking-wider">Valide 2025 — 2027</p>
+            <h3 class="font-display font-bold text-lg text-slate-900 mt-1">Certificat Secouriste SST</h3>
+            <p class="text-xs font-semibold text-slate-500 mt-0.5">IET Lyon</p>
+            <p class="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed">
+              Sauveteur Secouriste du Travail : prévention des risques professionnels, gestes de secours d'urgence et protection des salariés sur site.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-slate-100 text-xs text-rose-600 font-semibold flex items-center gap-1.5">
+            <i data-lucide="shield" class="w-4 h-4"></i> Habilitation officielle active
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ENGAGEMENT RSE & BÉNÉVOLAT ================= -->
+  <section id="engagement" class="py-20 bg-forest text-white relative overflow-hidden">
+    
+    <!-- Décoration fond vert profond -->
+    <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="bg-forest-dark/70 border border-emerald-500/30 rounded-3xl p-8 sm:p-12 backdrop-blur-sm">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold">
+              <i data-lucide="sprout" class="w-3.5 h-3.5"></i>
+              Bénévolat & Sensibilisation Écologique
+            </div>
+
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
+              Bénévole engagé chez <span class="text-emerald-400">Ma Petite Planète</span> (Lyon)
+            </h2>
+
+            <p class="text-emerald-100/90 text-sm sm:text-base leading-relaxed">
+              Parce que le volet <strong>Environnement</strong> du QHSE ne s'arrête pas aux fiches de conformité, je participe activement au défi écologique <em>Ma Petite Planète</em>. Cet engagement me permet d'animer des dynamiques de groupe, de sensibiliser aux gestes écoresponsables et de promouvoir des démarches RSE concrètes au quotidien.
+            </p>
+
+            <div class="flex flex-wrap gap-3 pt-2">
+              <span class="px-3 py-1 rounded-lg bg-emerald-900/60 border border-emerald-500/30 text-xs font-medium text-emerald-200">
+                🌱 Animation d'ateliers écologiques
+              </span>
+              <span class="px-3 py-1 rounded-lg bg-emerald-900/60 border border-emerald-500/30 text-xs font-medium text-emerald-200">
+                ⚡ Mobilisation des équipes & cohésion
+              </span>
+              <span class="px-3 py-1 rounded-lg bg-emerald-900/60 border border-emerald-500/30 text-xs font-medium text-emerald-200">
+                🌍 Culture de la durabilité
+              </span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 flex flex-col items-center justify-center text-center p-6 bg-emerald-950/60 rounded-2xl border border-emerald-500/20">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3">
+              <i data-lucide="leaf" class="w-8 h-8"></i>
+            </div>
+            <h4 class="font-display font-bold text-white text-base">Impact RSE</h4>
+            <p class="text-xs text-emerald-200/80 mt-1">
+              Prêt à impulser des actions concrètes au sein de votre politique RSE & ISO 14001.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CADRE DE L'ALTERNANCE (INFO RH) ================= -->
+  <section class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-r from-slate-50 via-emerald-50/30 to-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-forest font-bold text-xs uppercase tracking-wider">
+              <i data-lucide="info" class="w-4 h-4"></i> Informations Pratiques Recruteur RH
+            </div>
+            <h3 class="text-xl font-display font-bold text-slate-900">
+              Conditions & Modalités de l'Alternance
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 max-w-2xl leading-relaxed">
+              • <strong>Rythme :</strong> 1 semaine en formation théorique / 2 à 3 semaines en immersion entreprise.<br>
+              • <strong>Type de contrat :</strong> Contrat d'apprentissage ou de professionnalisation.<br>
+              • <strong>Prise en charge :</strong> Frais de formation finançables par votre OPCO (coût nul de scolarité pour l'entreprise).<br>
+              • <strong>Mobilité :</strong> Région Lyonnaise (Dardilly / Lyon métropole) et Île-de-France (Permis B).
+            </p>
+          </div>
+
+          <div class="shrink-0 flex flex-col gap-2.5">
+            <a href="#contact" class="px-5 py-3 rounded-xl bg-forest hover:bg-forest-light text-white text-xs sm:text-sm font-semibold text-center shadow transition-all">
+              Proposer un entretien
+            </a>
+            <button onclick="window.print()" class="no-print px-5 py-2.5 rounded-xl border border-slate-300 hover:bg-white text-slate-700 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all">
+              <i data-lucide="printer" class="w-3.5 h-3.5"></i> Imprimer cette fiche
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & CALL TO ACTION ================= -->
+  <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold text-forest uppercase tracking-widest bg-emerald-100/70 px-3 py-1 rounded-full border border-emerald-200">
+          Entrons en Contact
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 mt-3">
+          Prêt à échanger sur vos besoins QHSE
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Je suis à votre entière disposition pour convenir d'un échange téléphonique ou d'un entretien.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Cartes de Contact Rapides -->
+        <div class="space-y-4">
+          
+          <!-- Téléphone -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex items-center justify-between group hover:border-forest transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 text-forest flex items-center justify-center">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-semibold uppercase">Téléphone</p>
+                <a href="tel:0665568849" class="text-base font-bold text-slate-900 hover:text-forest transition-colors">
+                  06 65 56 88 49
+                </a>
+              </div>
+            </div>
+            <button onclick="copyToClipboard('0665568849', 'Numéro de téléphone')" class="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" title="Copier">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Email -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex items-center justify-between group hover:border-forest transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 text-forest flex items-center justify-center">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-semibold uppercase">Email direct</p>
+                <a href="mailto:isaacfofana50@gmail.com" class="text-sm sm:text-base font-bold text-slate-900 hover:text-forest transition-colors break-all">
+                  isaacfofana50@gmail.com
+                </a>
+              </div>
+            </div>
+            <button onclick="copyToClipboard('isaacfofana50@gmail.com', 'Adresse email')" class="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors" title="Copier">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Localisation -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-forest flex items-center justify-center">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400 font-semibold uppercase">Localisation & Mobilité</p>
+              <p class="text-sm font-semibold text-slate-800">
+                6 Chemin de la Chataigneraie, 69570 Dardilly (Lyon)
+              </p>
+              <p class="text-xs text-slate-500 mt-0.5">Permis B • Mobilité Paris / Lyon</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Formulaire de Contact Express (Mailto Générateur) -->
+        <div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/90 shadow-sm">
+          <h3 class="font-display font-bold text-lg text-slate-900 mb-1">M'envoyer un message</h3>
+          <p class="text-xs text-slate-500 mb-5">Remplissez ce formulaire pour m'écrire directement :</p>
+
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div>
+              <label for="name" class="block text-xs font-semibold text-slate-700 mb-1">Votre Nom / Entreprise *</label>
+              <input type="text" id="name" required placeholder="ex. Sophie Martin - Groupe Industriel" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest">
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs font-semibold text-slate-700 mb-1">Votre Email *</label>
+              <input type="email" id="email" required placeholder="sophie.martin@entreprise.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest">
+            </div>
+
+            <div>
+              <label for="subject" class="block text-xs font-semibold text-slate-700 mb-1">Objet</label>
+              <input type="text" id="subject" value="Opportunité d'alternance QHSE" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest">
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-semibold text-slate-700 mb-1">Votre Message *</label>
+              <textarea id="message" rows="3" required placeholder="Bonjour Isaac, votre profil nous intéresse pour notre site industriel..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3 rounded-xl bg-forest hover:bg-forest-light text-white font-semibold text-sm shadow flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Envoyer le message</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-white border-t border-slate-200 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div class="flex items-center gap-2">
+        <span class="font-display font-bold text-slate-800 text-sm">Isaac FOFANA</span>
+        <span>•</span>
+        <span>Portfolio QHSE & Gestion des Risques</span>
+      </div>
+      <div>
+        <span>Rythme : 1 sem. école / 2-3 sem. entreprise • Tous droits réservés © 2026</span>
+      </div>
+      <div>
+        <a href="#top" class="hover:text-forest transition-colors font-medium">Haut de page ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= NOTIFICATION TOAST ================= -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+    <span id="toast-message">Copié dans le presse-papier !</span>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Initialisation des icônes Lucide
+    lucide.createIcons();
+
+    // Gestion du menu mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Copie dans le presse-papier avec toast
+    function copyToClipboard(text, label) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`${label} copié dans le presse-papier !`);
+      }).catch(err => {
+        // Fallback
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast(`${label} copié dans le presse-papier !`);
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 3000);
+    }
+
+    // Soumission du formulaire par mailto pré-rempli
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value || 'Opportunité Alternance QHSE';
+      const message = document.getElementById('message').value;
+
+      const body = `Bonjour Isaac,\n\n${message}\n\nCordialement,\n${name}\nContact : ${email}`;
+      const mailtoUrl = `mailto:isaacfofana50@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      window.location.href = mailtoUrl;
+    }
+  </script>
+</body>
+</html>
